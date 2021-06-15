@@ -26,14 +26,12 @@ export default function App({ userProfile = defaultUserProfile }) {
         ]);
     };
 
-    return (
-        <div className="app">
+    return (<div className="app">
     <Navbar />
     <main className="main">
-      <UserProfile />
-      <Feed />
+      <UserProfile user={userProfile} />
+      <Feed tweets={tweets} addTweet={addTweet} />
       <Advertisements />
     </main>
-  </div>
-  );
+  </div>);
 }
