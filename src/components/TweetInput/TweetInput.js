@@ -1,6 +1,14 @@
 import "./TweetInput.css"
+import { useState } from "react";
+
 
 export default function TweetInput() {
+  const [control, setControl] = useState(false);
+
+// const handleOnTweetTextChange = () => {
+//   setControl(true);
+  
+// }
   return (
     <div className="tweet-container">
       <div className="tweet-box-top row">
@@ -9,8 +17,10 @@ export default function TweetInput() {
             <i className="fas fa-user fa-stack-1x"></i>
           </i>
         </span>
-
-        <textarea name="new-tweet" type="text" placeholder="What's Happening?"></textarea>
+        
+        <textarea name="new-tweet" type="text" placeholder="What's Happening?" onClick="handleOnTweetTextChange">
+        
+        </textarea>
 
         <i className="fas fa-image"></i>
       </div>
